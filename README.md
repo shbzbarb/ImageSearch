@@ -1,7 +1,5 @@
 # Image Analysis and Similarity Search Project
 
-## Codes Coming Soon...
-
 ## Example Outputs
 ### Image Classification
 <table>
