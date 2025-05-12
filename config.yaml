@@ -1,0 +1,40 @@
+#Model Configuration
+model:
+  #For example: 'google/vit-base-patch16-224-in21k'
+  #Output dimension of the feature vector from the model's pooler output or CLS token
+  # For 'google/vit-base-patch16-224-in21k', the hidden size is 768
+  #This MUST match the chosen model
+  name: 'google/vit-base-patch16-224-in21k'
+  embedding_dim: 768
+
+#Data Paths
+data:
+  raw_dir: 'data/raw'
+  processed_dir: 'data/processed'
+
+#Milvus Lite Configuration
+milvus:
+  uri: './milvus_data/milvus.db'
+  collection_name: 'image_embeddings_vit_base'
+
+  #Vector Index Details
+  embedding_field_name: 'embedding'
+  index_name: 'idx_vector_embeddings'
+  index_type: 'IVF_FLAT'
+  index_params:
+    nlist: 1024
+  metric_type: 'L2'
+
+  #Search Details
+  search_params:
+    nprobe: 10
+
+#Feature Extraction Settings
+extraction:
+  #Number of images to process in a single batch
+  batch_size: 32
+
+#Search Settings
+search:
+  #Number of similar images to retrieve
+  top_k: 10
