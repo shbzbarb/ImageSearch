@@ -101,21 +101,14 @@ The project follows a modular architecture, with distinct components for differe
 7.  Utility Functions (`src/utils.py`):
 	* Contains helper functions, such as `load_config` for parsing the `config.yaml` file
 
-## Setup Instructions
-1.  Clone the Repository:
-	```sh
-	git clone https://github.com/shbzbarb/ImageSearch
-	```
+## Prerequisites
+* **Conda**
+* **Python:** 3.9+ (e.g., Python 3.11.12)
+* **PyTorch:** 2.7.0 (with CUDA 11.8 support)
+* **Transformers:** 4.51.3
+* **Pymilvus:** 2.5.8
+* **Milvus Lite:** 2.4.12
 
-2.  Create and Activate Conda Environment:
-	It's highly recommended to use Conda for environment management. You can create the environment using the provided `environment.yml` file:
-
-	* Using `environment.yml` (Recommended):
-    	This file contains the package versions used during development, including Conda and pip-installed packages.
-    	```bash
-    	conda env create -f environment.yml
-    	conda activate image_search
-    	```
 
 ## Execution and Usage
 Make sure your Conda environment is activated before running any scripts. All scripts are located in the scripts/ directory
